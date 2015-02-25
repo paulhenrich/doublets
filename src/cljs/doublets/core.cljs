@@ -1,8 +1,10 @@
 (ns doublets.core
   (:require [om.core :as om :include-macros true]
-            [om.dom :as dom :include-macros true]))
+            [om.dom :as dom :include-macros true]
+            [ajax.core :refer [GET]]))
 
-(defonce app-state (atom {:text "Doublets solver"}))
+(defonce app-state (atom {:text "Doublets solver"
+                          :random-word "Foo"}))
 
 (defn main []
   (om/root
@@ -13,3 +15,5 @@
           (dom/h1 nil (:text app)))))
     app-state
     {:target (. js/document (getElementById "app"))}))
+
+(GET "/cromulent-words" {:handler (fn [response] (.log js/console (str response)))})
