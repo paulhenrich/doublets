@@ -83,7 +83,7 @@ Now your app is running at
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2015 Paul Henrich
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
